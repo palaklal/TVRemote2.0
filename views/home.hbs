@@ -35,23 +35,3 @@
 		{{/if}}
 	</h3>
 </div>
-<h1>Binge Away</h1>
-<ul>	
-	{{#each list}}
-	<li>
-		<a href="/list/"+{{this.name}}>
-		{{this.name}}
-		</a>
-	</li>
-	{{/each}}
-</ul>
-
-<h1>Create a new List of TV Shows</h2>
-<form method="POST" action="/list/create" class="form" class="col s12">
-<br/>
-	Name: <input type="text" name="name">
-	<br/>
-<br/>
-<input class="waves-effect waves-green btn-large" id="button" type="submit" value="Create New List">
-<br/>
-</form>
