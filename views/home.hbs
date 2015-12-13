@@ -1,0 +1,57 @@
+<div class="tv">
+	<h5><a href="/project/information">Click here to find out more about this Project</a></h5>
+	<h3> (THIS, NOT SHOW/CREATE/, IS THE AJAX FORM) </h3>
+	<h2>What's the creator's favorite show?</h2>
+	<form method="get">
+		<input class="waves-effect waves-green btn-large" id="btn" type="submit" value="Find out!!">
+	</form>
+	<div id="filtered">
+		<img id="current">
+	</div>
+<script type="text/javascript" src="/js/ajax.min.js"></script>
+
+<h1 class="header">Binge Away, {{user.username}}</h1>
+	<ul>	
+		{{#each user.lists}}
+		<li>
+			<a href="list/{{this.name}}">
+				{{this.name}}
+			</a>
+		</li>
+		{{/each}}
+	</ul>
+
+<h1>Create a new List of TV Shows</h2>
+	<form method="POST" action="/list/create" class="form">
+		<br/>
+		Name: <input type="text" name="name">
+		<input type="hidden" name="username" value={{user.username}}>
+		<input class="waves-effect waves-green btn-large" type="submit" value="Create New List">
+		<br/>
+	</form>
+	<h3>
+		{{#if message}}
+			{{message}}
+		{{/if}}
+	</h3>
+</div>
+<h1>Binge Away</h1>
+<ul>	
+	{{#each list}}
+	<li>
+		<a href="/list/"+{{this.name}}>
+		{{this.name}}
+		</a>
+	</li>
+	{{/each}}
+</ul>
+
+<h1>Create a new List of TV Shows</h2>
+<form method="POST" action="/list/create" class="form" class="col s12">
+<br/>
+	Name: <input type="text" name="name">
+	<br/>
+<br/>
+<input class="waves-effect waves-green btn-large" id="button" type="submit" value="Create New List">
+<br/>
+</form>

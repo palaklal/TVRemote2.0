@@ -1,0 +1,52 @@
+/* line 1, ../sass/style.scss */
+body {
+  text-align: center;
+  background: #212121;
+  font-weight: bold;
+}
+
+/* line 7, ../sass/style.scss */
+.tv {
+  background-image: url("../images/death.jpg");
+  border-radius: 15rem;
+  border: 4rem solid #212121;
+}
+
+/* line 13, ../sass/style.scss */
+.error {
+  background-image: url("../images/rainbow.gif");
+  border-radius: 15rem;
+  border: 4rem solid #212121;
+}
+
+/* line 19, ../sass/style.scss */
+a {
+  font-size: 200%;
+}
+
+/* line 23, ../sass/style.scss */
+.form {
+  width: 100%;
+  font-size: 150%;
+}
+
+/* line 28, ../sass/style.scss */
+.form input {
+  text-align: center;
+}
+
+/* line 32, ../sass/style.scss */
+.btn-large {
+  background: #757575;
+}
+
+/* line 36, ../sass/style.scss */
+label {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* line 41, ../sass/style.scss */
+input {
+  text-align: center;
+}

@@ -1,0 +1,43 @@
+body {
+  text-align: center;
+  background: #212121;
+  font-weight: bold;
+}
+
+.tv {
+  background-image: url("../images/death.jpg");
+  border-radius: 15rem;
+  border: 4rem solid #212121;
+}
+
+.error {
+  background-image: url("../images/rainbow.gif");
+  border-radius: 15rem;
+  border: 4rem solid #212121;
+}
+
+a {
+  font-size: 200%;
+}
+
+.form {
+  width: 100%;
+  font-size: 150%;
+}
+
+.form input {
+  text-align: center;
+}
+
+.btn-large {
+  background: #757575;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+input {
+  text-align: center;
+}

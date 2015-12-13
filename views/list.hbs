@@ -1,0 +1,47 @@
+<div class="tv">
+	<h5><a href="/home">Home</a></h5>
+	<h2>{{listName}}</h2>
+	<ul>	
+		{{#each show}}
+				<img src="{{this.name}}">
+		{{/each}}
+	</ul>
+	<div>
+		<form method="POST" action="/show/create">
+			<input type="text" name="name" id="showName" placeholder="show's name"><br>
+			<h3>
+				{{#if message}}
+					{{message}}
+				{{/if}}
+			</h3>
+			<h1>What day does it air?</h1>
+			<input class="filled-in" id="sunday" type="radio" name="airs" value="Sunday"/><label for="sunday">Sunday</label>
+			<input class="filled-in" id="monday" type="radio" name="airs" value="Monday"/><label for="monday">Monday</label>
+			<input class="filled-in" id="tuesday" type="radio" name="airs" value="Tuesday"/><label for="tuesday">Tuesday</label>
+			<input class="filled-in" id="wednesday" type="radio" name="airs" value="Wednesday"/><label for="wednesday">Wednesday</label>
+			<input class="filled-in" id="thursday" type="radio" name="airs" value="Thursday"/><label for="thursday">Thursday</label>
+			<input class="filled-in" id="friday" type="radio" name="airs" value="Friday"/><label for="friday">Friday</label>
+			<input class="filled-in" id="saturday" type="radio" name="airs" value="Saturday"/><label for="saturday">Saturday</label><br>
+			<h1>If not yet running, what day will it return?</h1>
+			<input type="date" class="datepicker" name="returns"><br>
+			<input type="hidden" name="slug" value={{list-slug}}>
+		<br>
+		<input class="waves-effect waves-green btn-large" id="button" type="submit" value="Add to List!">
+		</form>
+	</div>
+</div>
+<h2>{{listName}}</h2>
+<ul>	
+	{{#each shows}}
+		<li>
+			{{this.name}}
+		</li>
+	{{/each}}
+</ul>
+
+<form method="POST" action="/show/create">
+	<input type="text" name="name">
+	<input type="hidden" name="slug" value={{list-slug}}>
+<br>
+<input class="waves-effect waves-green btn-large" id="button" type="submit" value="Add to List!">
+</form>
