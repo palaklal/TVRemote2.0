@@ -13073,20 +13073,21 @@ a {
 /* line 28, ../sass/style.scss */
 .form input {
   text-align: center;
+  font-weight: bolder;
 }
 
-/* line 32, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 .btn-large {
   background: #757575;
 }
 
-/* line 36, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 label {
   font-weight: bold;
   font-size: 1.4rem;
 }
 
-/* line 41, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 input {
   text-align: center;
 }
