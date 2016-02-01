@@ -31,4 +31,4 @@ This is a very bare-bones app for now! It very much needs a redesign and most of
  
  -Form validation using connect-flash and request middleware
 
-Run command "nodemon bin/www" (or just node) to get app running locally!
+Run command "nodemon bin/www" (or just node) to get app running locally on port 3000.
