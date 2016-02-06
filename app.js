@@ -21,6 +21,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 passport.serializeUser(function(user, done) {
   done(null, user._id);
 });
@@ -40,7 +42,6 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
