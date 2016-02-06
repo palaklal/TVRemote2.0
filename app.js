@@ -11,6 +11,7 @@ var mongoose = require('mongoose');
 var User = mongoose.model('User');
 
 var app = express();
+app.use(express.static(path.join(__dirname, 'public')));
 
 //for passport user authentication
 var passport = require('passport');
@@ -20,8 +21,6 @@ app.use(session({secret: "myBiggestBaddestSecret"}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
-
-app.use(express.static(path.join(__dirname, 'public')));
 
 passport.serializeUser(function(user, done) {
   done(null, user._id);
