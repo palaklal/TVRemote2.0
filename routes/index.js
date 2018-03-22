@@ -35,7 +35,7 @@ router.get('/', function(req, res) {
 router.post('/login', passport.authenticate('login', {
 	successRedirect: '/home',
 	failureRedirect: '/',
-	failureFlash : true 
+	failureFlash : true
 }));
 
 /* GET Registration Page */
@@ -47,7 +47,7 @@ router.get('/signup', function(req, res){
 router.post('/signup', passport.authenticate('signup', {
 	successRedirect: '/home',
 	failureRedirect: '/signup',
-	failureFlash : true 
+	failureFlash : true
 }));
 
 router.get('/signout', function(req, res) { //never ended up using because why would you ever sign out!
@@ -60,7 +60,7 @@ router.post('/list/create', function(req, res) {
 		req.flash('message', 'The list must have a name!');
 		res.redirect('/home');
 	}
-	else { 
+	else {
 		var newList = new List({
 			name: req.body.name.toLowerCase()
 		});
@@ -94,9 +94,9 @@ router.post('/show/create', function(req, res) {
 		req.flash('message', 'The show must have a name!');
 		res.redirect('/list/'+req.body.slug);
 	}
-	else { 
+	else {
 		var url = "http://www.omdbapi.com/";
-	    url += "?t=" + req.body.name + "&plot=full" +"&r=json";
+	    url += "?t=" + req.body.name + "&plot=full" +"&r=json" +"&apikey=c7c6dcb1";
 		request(url, function(error, response, body) {
 			var newTVShow = new TvShow({
 				name: req.body.name
