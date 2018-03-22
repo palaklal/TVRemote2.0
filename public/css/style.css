@@ -4,11 +4,32 @@ body {
   font-weight: bold;
 }
 
-line 7, ../sass/style.scss
+body:before {
+  content:"";
+  position: absolute;
+  border-top: 2px solid #212121;
+  width: 9rem;
+  transform: rotate(215deg);
+  transform-origin: 0% 0%;
+}
+.tv:before {
+  content:"";
+  position: absolute;
+  border-top: 2px solid #212121;
+  width: 5rem;
+  transform: rotate(315deg);
+  transform-origin: -30% -40%;
+}
+/*line 7, ../sass/style.scss*/
 .tv {
-  background-image: url("../images/death.jpg");
-  border-radius: 15rem;
-  border: 4rem solid #212121;
+  /*background-image: url("../images/death.jpg");*/
+  border-radius: 1rem;
+  border: .1rem solid #212121;
+  width: 50%;
+  padding: 1rem;
+  margin: 0px auto;
+  margin-top: 12rem;
+  position: relative;
 }
 
 /* line 13, ../sass/style.scss */
@@ -18,7 +39,7 @@ line 7, ../sass/style.scss
 
 /* line 19, ../sass/style.scss */
 a {
-  
+
 }
 
 /* line 23, ../sass/style.scss */
