@@ -1,9 +1,10 @@
 # TVRemote2.0
-(You can also view this app on heroku: tvremote.herokuapp.com/ )
 
  Have a hard time keeping up with all the great TV shows and movies out there? This will help you organize them into lists! It automatically pulls an image from IMDB to keep your lists from being sore on the eyes! Eventually the site will also remind you what shows to watch on what days, when a show is coming back, what episodes are in your queue, and much more!
  
-This is a very bare-bones app for now! It very much needs a redesign and most of the planned functionality is yet to be implemented. There are some recorded bugs as well and the code needs to be cleaned up a bit.
+This is a very bare-bones app for now! It needs a redesign and most of the planned functionality is yet to be implemented. There are some recorded bugs as well and the code needs to be cleaned up a bit.
+
+# Update: OMDB (movie poster API) is no longer supported!
 
 # Many tools/frameworks were used for this project:
  
