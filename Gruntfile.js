@@ -27,7 +27,7 @@ module.exports = function(grunt) {
         dest: 'public/css/build.min.css'
       }
     },
-  	compass: {
+  	/*compass: {
   		dist: {
   			options: {
   				sassDir: 'public/sass',
@@ -35,10 +35,12 @@ module.exports = function(grunt) {
   			}
   		}
   	},
+    Support deprecated, removed from watch: css: tasks
+    */
   	watch: {
   		css: {
 	  		files: ['public/css/*.css', 'public/sass/*.scss'],
-	  		tasks: ['compass', 'concat', 'cssmin']
+	  		tasks: ['concat', 'cssmin']
 	  	},
 	  	scripts: {
 	  		files: ['*.js', 'routes/*.js', 'public/js/*.js'],
@@ -52,7 +54,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+  //grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
