@@ -25,6 +25,7 @@ body:before {
   /*background-image: url("../images/death.jpg");*/
   border-radius: 1rem;
   border: .1rem solid #212121;
+  min-width: 15rem;
   width: 50%;
   padding: 1rem;
   margin: 0px auto;
@@ -35,6 +36,13 @@ body:before {
 /* line 13, ../sass/style.scss */
 .error {
 
+}
+
+.poster {
+  width: 10rem;
+  height: 10rem;
+  border-radius:100%;
+  margin: 1rem;
 }
 
 /* line 19, ../sass/style.scss */

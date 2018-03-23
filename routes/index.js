@@ -99,7 +99,8 @@ router.post('/show/create', function(req, res) {
 	    url += "?t=" + req.body.name + "&plot=full" +"&r=json" +"&apikey=c7c6dcb1";
 		request(url, function(error, response, body) {
 			var newTVShow = new TvShow({
-				name: req.body.name
+				name: req.body.name,
+				title: req.body.name
 			});
 			if (req.body.airs !== undefined) {
 				newTVShow.day = req.body.airs;
@@ -115,8 +116,9 @@ router.post('/show/create', function(req, res) {
 				res.redirect('/list/'+req.body.slug);
 			}
 			else {
-				console.log(OMDB.Poster);
+				console.log(OMDB);
 				newTVShow.name = OMDB.Poster;
+				newTVShow.title = OMDB.Title;
 				TvShow.update(newTVShow);
 				console.log(newTVShow);
 				List.findOneAndUpdate({slug: req.body.slug}, {$push: {shows: newTVShow}}, function(err) {

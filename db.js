@@ -15,7 +15,8 @@ var tvShow = new mongoose.Schema({
   episodes: [episode], //list of episodes
   day: {type: String, required: false}, //day of the week it airs
   returnDate: {type: Date, required: false}, //when show returns from hiatus
-  posterURL: {type: String, required: false}
+  posterURL: {type: String, required: false},
+  title: {type: String, required: false} //title of movie/tvshow
 });
 tvShow.plugin(URLSlugs('name'));
 // , {
